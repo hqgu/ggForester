@@ -1,0 +1,13 @@
+obsid,label,n_treat,n_control,nevent_treat,nevent_control,estCI,weight,Est1,LowerCL1,UpperCL1,Est2,LowerCL2,UpperCL2
+Observation ID,Study ID,No. of Patients in Treat ,No. of Patients in Control ,No. of Event in Treat ,No. of Event in Control  ,RR (95% CI),Study Weight,RR,LowerCL,UpperCL,Pooled RR,Pooled RR Lower CI,Pooled RR Upper CI
+1,P2Y12 inhibitor=Clopidogrel,,,,,,,,,,,,
+2,FASTER,201,195,14,21,0.65 [0.34; 1.24],0.024,0.65,0.34,1.24,,,
+3,CHANCE,2584,2586,212,303,0.70 [0.59; 0.83],0.36,0.7,0.59,0.83,,,
+4,POINT,2432,2449,116,156,0.75 [0.59; 0.95],0.184,0.75,0.59,0.95,,,
+5,Random effect model ,5217,5230,342,480,0.71 [0.62; 0.81],0.568,,,,0.71,0.62,0.81
+6,,,,,,,,,,,,,
+7,P2Y12 inhibitor=Ticagrelor,,,,,,,,,,,,
+8,THALES,5523,5493,284,347,0.81 [0.70; 0.95],0.432,0.81,0.7,0.95,,,
+9,Random effect model ,5523,5493,284,347,0.81 [0.70; 0.95],0.432,,,,0.81,0.7,0.95
+10,,,,,,,,,,,,,
+11,Random effect model,10740,10732,626,827,0.76 [0.68; 0.83],1,,,,0.76,0.68,0.83

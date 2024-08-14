@@ -1,0 +1,20 @@
+obsid,grpID,indnt,label,group,EstCI,Est,LowerCL,UpperCL
+Observation ID,Group ID,Indent Indicator,Outcomes,Model,OR (95% CI),OddsRatioEst,LowerCL,UpperCL
+1,1,0,In-hospital death/DAMA,Model 1,1.35 (1.25-1.45),1.35,1.25,1.45
+2,1,0,In-hospital death/DAMA,Model 2,1.61 (1.45-1.78),1.61,1.45,1.78
+3,2,1,In-hospital death,Model 1,1.51 (1.40-1.62),1.51,1.4,1.62
+4,2,1,In-hospital death,Model 2,1.94 (1.76-2.15),1.94,1.76,2.15
+5,3,1,DAMA ,Model 1,1.24 (1.10-1.38),1.24,1.1,1.38
+6,3,1,DAMA ,Model 2,1.33 (1.16-1.54),1.33,1.16,1.54
+7,4,0,In-hospital MACE,Model 1,1.68 (1.52-1.85),1.68,1.52,1.85
+8,4,0,In-hospital MACE,Model 2,1.75 (1.48-2.06),1.75,1.48,2.06
+9,5,1,Cerebral infarction,Model 1,1.46 (1.33-1.58),1.46,1.33,1.58
+10,5,1,Cerebral infarction,Model 2,1.48 (1.30-1.68),1.48,1.3,1.68
+11,6,1,Cerebral hemorrhage,Model 1,1.91 (1.71-2.11),1.91,1.71,2.11
+12,6,1,Cerebral hemorrhage,Model 2,2.20 (1.82-2.65),2.2,1.82,2.65
+13,7,1,TIA,Model 1,3.98 (3.41-4.55),3.98,3.41,4.55
+14,7,1,TIA,Model 2,3.91 (2.22-6.90),3.91,2.22,6.9
+15,8,1,Myocardial infarction,Model 1,2.50 (2.22-2.78),2.5,2.22,2.78
+16,8,1,Myocardial infarction,Model 2,2.76 (2.11-3.62),2.76,2.11,3.62
+17,9,0,Disability at discharge,Model 1,0.99 (0.88-1.11),0.99,0.88,1.11
+18,9,0,Disability at discharge,Model 2,1.04 (0.94-1.15),1.04,0.94,1.15

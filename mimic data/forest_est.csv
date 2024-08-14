@@ -1,0 +1,11 @@
+obsid,indnt,label,treat,control,EstCI,Est,LowerCL,UpperCL
+Observation ID,Indent Indicator,Outcomes,No.(%) in Treat,No.(%) Control,OR (95% CI),OddsRatioEst,LowerCL,UpperCL
+1,0,In-hospital death/DAMA,1752(13.9),102 853 (8.6),1.35 (1.25-1.45),1.35,1.25,1.45
+2,1,In-hospital death,847 (5.7),34 796 (2.5),1.51 (1.40-1.62),1.51,1.4,1.62
+3,1,DAMA ,905 (7.7),68 057 (5.8),1.24 (1.10-1.38),1.24,1.1,1.38
+4,0,In-hospital MACE,1884 (12.6),88 689 (6.5),1.68 (1.52-1.85),1.68,1.52,1.85
+5,1,Cerebral infarction,1341 (9.0),72 046 (5.3),1.46 (1.33-1.58),1.46,1.33,1.58
+6,1,Cerebral hemorrhage,360 (2.4),11 902 (0.9),1.91 (1.71-2.11),1.91,1.71,2.11
+7,1,TIA,408 (2.7),8184 (0.6),3.98 (3.41-4.55),3.98,3.41,4.55
+8,1,Myocardial infarction,222 (1.5),5123 (0.4),2.50 (2.22-2.78),2.5,2.22,2.78
+9,0,Disability at discharge,3548 (41.1),284 524 (33.1),0.99 (0.88-1.11),0.99,0.88,1.11
