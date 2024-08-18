@@ -699,7 +699,7 @@ proc template;
                         yaxisopts=(type=discrete reverse=true 
                         tickvalueattrs=(weight=bold) discreteopts=(colorbands=odd  colorbandsattrs=(transparency=0.6)))  yaxisopts=(display=none);
 
-          axistable y=&obsid value=&text_var1 /display=(values) textgroup=type  indentweight=indt;
+          axistable y=&obsid value=&text_var1 /display=(values) textgroup=type  indentweight=indnt;
         endlayout;
 
         /*--Second column for n(%)of event in treat group*/
