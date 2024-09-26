@@ -10,16 +10,16 @@ plot_var= variable list,
 fig_save= filename or path, 
 )
 
+Author: Hongqiu Gu
 Contact: guhongqiu@yeah.net
 
 Note:
 1. CSV_PATH can be a filename or path
 2. FIG_TYPE can be REG, SUB, EST, META, REG_MX, REG_MC, REG_MR, SUB_MX, SUB_MC, SUB_MR, EST_MX, EST_MC, EST_MR
-3. EFFECT_TYPE can be OR, RR, HR, RD
+3. EFFECT_TYPE can be OR, RR, HR, RD,MD
 
 Log:
 1. 2024-08-13: Version 1.0
-
 ======================================;
 
 %macro ggForester(
@@ -178,7 +178,7 @@ quit;
   %end;
 
   %if %upcase(&fig_type) EQ META %then %do;
-     %let text_var=label n_treat n_control nevent_treat nevent_control estCI ;
+     %let text_var1=label n_treat n_control nevent_treat nevent_control estCI ;
      %let text_var2=weight;
   %end;
 
@@ -239,6 +239,17 @@ quit;
      %let text_var5=EstCI2;
   %end;
 %end;
+%else %do;
+   %let text_var1=%scan(&text_var, 1, |);
+   %let text_var2=%scan(&text_var, 2, |);
+   %if  %upcase(&fig_type) in  %str(REG_MC SUB_MC EST_MC) %then %do;
+      %let text_var2=%scan(%qscan(&text_var, 2, |), 1);
+      %let text_var3=%scan(%qscan(&text_var, 2, |), 2);
+      %let text_var4=%scan(%qscan(&text_var, 2, |), 3);
+      %let text_var5=%scan(%qscan(&text_var, 2, |), 4);
+      %let text_var6=%scan(%qscan(&text_var, 2, |), 5);
+  %end;
+%end;
 
 
 
@@ -265,12 +276,14 @@ quit;
 %end;
 %else %do;
    %let obsid=%scan(&plot_var, 1, |);
-   %let est1=%scan(&plot_var, 2, |);
-   %let lowerCL1=%scan(&plot_var, 3, |);
-   %let upperCL1=%scan(&plot_var, 4, |);
-   %let est2=%scan(&plot_var, 5, |);
-   %let lowerCL2=%scan(&plot_var, 6, |);
-   %let upperCL2=%scan(&plot_var, 6, |);
+   %let est1=%scan(%qscan(&plot_var, 2, |), 1);
+   %let lowerCL1=%scan(%qscan(&plot_var, 2, |), 2);
+   %let upperCL1=%scan(%qscan(&plot_var, 2, |),3);
+   %if %upcase(&fig_type) in %str(REG_MX REG_MC SUB_MX SUB_MC EST_MX EST_MC) %then %do;
+      %let est2=%scan(%qscan(&plot_var, 3, |), 1);
+      %let lowerCL2=%scan(%qscan(&plot_var, 3, |), 2);
+      %let upperCL2=%scan(%qscan(&plot_var, 3, |),3);
+   %end;
 %end;
 
 
@@ -795,5 +808,3 @@ run;
    ods pdf close;
 %end;
 %mend ggForester;
-
-
